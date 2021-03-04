@@ -5,5 +5,5 @@
  * Se imstala npm init
  * Se crea el package.json
  * Se crea la app con el comando npx create-react-app event-carlosjesus
- * Se se creó carpeta event-boby
+ * Se se creó carpeta event-carlosjesus
 
