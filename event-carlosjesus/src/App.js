@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import { NavBar } from './components/nav-bar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import foto from '../src/img/fotomesa-render.jpg' ;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Bienvenido a la futura web de Eventos !!!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar></NavBar>
+      <h1> </h1>
+      <div>
+        <img src = {foto} className ='rounded mx-auto d-block'  alt = ''></img>
+      </div>
     </div>
   );
 }
