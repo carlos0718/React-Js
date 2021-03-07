@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/carlos0718/React-Js/issues"
   },
-  "homepage": "https://github.com/carlos0718/React-Js#readme"
+  "homepage": "https://github.com/carlos0718/React-Js#readme",
+  "dependencies": {
+    "bootstrap": "^4.6.0"
+  }
 }
