@@ -4,9 +4,9 @@
  
  * Se imstala npm init
  * Se crea el package.json
- * Se crea la app con el comando npx create-react-app event-carlosjesus
+ * Se crea la app con el comando npx create-react-app dress-carlosjesus
  * Se se creó carpeta event-carlosjesus
-
+ * ejecutar la app desde la consola con 'npm start'.
 ### version 1.0.1
 
  * se agrega carpeta components
@@ -15,4 +15,9 @@
  * luego se exporta el componente Nav-Bar a archivo App.js
  * se instala bootstrap por linea de comando con npm : npm install bootstrap
  * se usa bootstrap para hacer la barra de navegación.
- * se inserta imagen a modo de prueba. 
+### version 1.0.2
+ * se agregar cartWidget en la carpeta components.
+ * se agrega imagen de carrito dentro de ella, y se importa.
+ * luego se exporta cartWidget a nav-bar.
+ * se agrega listContainer en la carpeta components.
+ * se exporta a app.js para mostrarlo en la app.
