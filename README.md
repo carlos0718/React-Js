@@ -16,8 +16,16 @@
  * se instala bootstrap por linea de comando con npm : npm install bootstrap
  * se usa bootstrap para hacer la barra de navegación.
 ### version 1.0.2
- * se agregar cartWidget en la carpeta components.
+ * se agregar archivo cartWidget en la carpeta components.
+ * se crea componente cartWidget.
  * se agrega imagen de carrito dentro de ella, y se importa.
  * luego se exporta cartWidget a nav-bar.
  * se agrega listContainer en la carpeta components.
  * se exporta a app.js para mostrarlo en la app.
+### version 1.0.3
+ * se agrega archivo itemCont.
+ * se crea componente itemCont.
+   se exporta al archivo listContainer y se monta dentro de ListContainer.
+ * se usa props para usar asignar valores enteros al valor inicial y a stock.
+ * se usa Hooks : useState().
+ * y se hace funcional el cuadro de contador de articulos.

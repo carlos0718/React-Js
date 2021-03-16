@@ -1,0 +1,27 @@
+.cardContenedor{
+    margin-left: auto;
+    margin-right: auto;
+    width: 25rem;
+    height: 12rem;
+}
+
+.boxCont{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 35px;
+    width: 20rem; 
+    height: 3rem;
+    display:inline-block;
+}
+
+.button{
+    width: 5rem;
+}
+
+.lblCont{
+    padding: 9px 55px;
+}
+
+.btnAdd{
+    margin: 25px;
+}
