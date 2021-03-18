@@ -5,7 +5,8 @@ const ListContainer = (props) => {
     return(
         <div>
             <p>{props.text}</p>
-            <ItemCont text = 'Agregar al carrito' numero = {0} stock = {10} initial = {0}  />
+            <ItemCont text = 'Agregar al carrito' 
+            numero = {0} stock = {10} initial = {0}/>
         </div>
     );
 };
