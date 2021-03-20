@@ -28,10 +28,50 @@
 
 .itemCard{
    width: 18rem; 
-   height: 45vh;
-   margin: 2em;
+   height: 35rem;
+   margin-left:auto;
+   margin-right: auto;
+   margin-bottom: 7em;
+   
 }
 
 .itemListCard{
-    display: flex;
+    display:flex;
+}
+
+.containerItemList{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* @media (min-width : 700px){
+    .itemListCard{
+        display:inline;
+    }
+    .itemCard{
+        width: 18rem;
+        height: 18rem; 
+        margin-left:auto;
+        margin-right: auto;
+        
+     }
+} */
+@media (max-width : 700px){
+    .itemListCard{
+        display:inline;
+    }
+    .itemCard{
+        width: 10rem;
+        height: auto;
+        margin-left:auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+        font-size: 0.8rem;
+        
+     }
+
+     .containerItemList{
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
 }

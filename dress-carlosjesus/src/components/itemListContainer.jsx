@@ -47,8 +47,9 @@ const ItemListContainer = (props) => {
 
     return(
         <div>
-            <ItemList items={items}/>
-
+            <div className = 'containerItemList'>
+                <ItemList items={items}/>
+            </div>
             <p>{props.text}</p>
             <ItemCont text = 'Agregar al carrito' 
             numero = {0} stock = {10} initial = {0}/>
