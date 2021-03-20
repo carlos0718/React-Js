@@ -25,7 +25,10 @@
 ### version 1.0.3
  * se agrega archivo itemCont.
  * se crea componente itemCont.
-   se exporta al archivo listContainer y se monta dentro de ListContainer.
+   se exporta al archivo itemListContainer y se monta dentro de ItemListContainer.
  * se usa props para usar asignar valores enteros al valor inicial y a stock.
  * se usa Hooks : useState().
  * y se hace funcional el cuadro de contador de articulos.
+### version 1.0.4
+ * Se agrega el archivo item.jsx e itemList.jsx
+ * 

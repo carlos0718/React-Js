@@ -1,7 +1,7 @@
 import React from 'react';
 import CartWidget from './cartWidget';
 
-export const NavBar = () => {    
+const NavBar = () => {    
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -46,3 +46,5 @@ export const NavBar = () => {
       
     );
 };
+
+export default NavBar;

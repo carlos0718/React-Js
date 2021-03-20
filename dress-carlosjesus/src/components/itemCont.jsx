@@ -13,7 +13,7 @@ const ItemCont = (props) => {
     }
     const onAdd = ()=> {        
         alert(`Se agregó ${value} articulo(s) al carrito`)
-        console.log('asdasdas');
+        //console.log('asdasdas');
     }
     
     return (

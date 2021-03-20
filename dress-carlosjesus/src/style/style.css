@@ -25,3 +25,13 @@
 .btnAdd{
     margin: 25px;
 }
+
+.itemCard{
+   width: 18rem; 
+   height: 45vh;
+   margin: 2em;
+}
+
+.itemListCard{
+    display: flex;
+}
