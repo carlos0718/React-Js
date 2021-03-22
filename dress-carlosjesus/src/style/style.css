@@ -36,14 +36,24 @@
 }
 
 .itemListCard{
-    display:flex;
+    display: inline;
 }
 
 .containerItemList{
     margin-top: 2em;
     margin-bottom: 2em;
+    column-count: 2;
 }
 
+.itemDetail{
+    max-width: 100%;
+    margin: 2rem;
+}
+
+.cardBody{
+    padding: 9rem ;
+    margin: 5rem;
+}
 /* @media (min-width : 700px){
     .itemListCard{
         display:inline;

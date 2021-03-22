@@ -30,5 +30,13 @@
  * se usa Hooks : useState().
  * y se hace funcional el cuadro de contador de articulos.
 ### version 1.0.4
- * Se agrega el archivo item.jsx e itemList.jsx
- * 
+ * Se agrega el archivo item.jsx e itemList.jsx, y se crea componentes correspondientes.
+ * Se agrega array de objetos de articulos en el archivo itemListContainer.
+ * se exporta item.jsx a itemList.jsx
+ * luego el componente itemList se exporta a itemListContainer.
+ * se usa useEffects para hacer la promesa y renderizar el listaldo de items despues de 2s.
+ ### version 1.0.5
+ * se crea archivo itemDetailContainer.jsx y se crea componente.
+ * se crea archivo itemDetail.jsx y se crea componente
+ * se harcodea el detalle de articulo en funcion getItems.
+ * se usa useEffect para mostrar getItems despues de 2s.
