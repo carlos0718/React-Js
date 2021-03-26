@@ -11,7 +11,7 @@ const ItemDetail = ({item}) => {
                     <div className="card-body cardBody">
                         <h5 className="card-title">{item.title}</h5>
                         <p className="card-text">{item.detail}</p>
-                        <h3 className="card-text">${item.price}</h3>
+                        <h3 className="card-text">$ {item.price}</h3>
                     </div>
                 </div>
             </div>

@@ -3,18 +3,35 @@ import NavBar  from './components/nav-bar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './components/itemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import Error from './components/Error';
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
+
 
 function App() {
   return (
-    <div className="App">
-      <NavBar></NavBar>
-      <div>
-        <ItemListContainer text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit"/>
+    <BrowserRouter>
+      <div className="App">
+        <NavBar></NavBar>
+        <Switch>
+          <Route exact path = '/'>
+            <ItemListContainer text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit" />
+          </Route>
+          <Route path = '/category/:id'>
+            <div>
+              <ItemListContainer text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit" />
+            </div>
+          </Route>
+          <Route path = '/item/:id'>
+            <div>
+              <ItemDetailContainer />
+            </div>
+          </Route>
+          <Route path = '*'>
+              <Error/>
+          </Route>
+        </Switch>
       </div>
-      <div>
-        <ItemDetailContainer/>
-      </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

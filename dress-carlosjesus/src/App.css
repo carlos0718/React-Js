@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: "Proxima Nova",-apple-system,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif,sans-serif;
+  font-size: 15px;
 }
 
 .App-logo {

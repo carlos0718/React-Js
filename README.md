@@ -1,5 +1,10 @@
 # Curso React-Js de CoderHouse
-# PROYECTO REACT-JS
+# PROYECTO REACT-JS: Tienda de Ropa online
+# E-commerce de venta online de ropa, tanto para caballero y dama. Encontrás la ropa que te gusta por catedorias.
+# Selecciona las categorías desde la barra de navegación y encontrás el listado de articulos. 
+# Mira el detalle/descripción de cada prenda para ver si se ajusta a tu medida y gustos.
+# Dale añadir al carrito para poder guardarlo, y luego finalizar tu compra.
+
 ### version 1.0.0
  
  * Se imstala npm init
@@ -40,3 +45,14 @@
  * se crea archivo itemDetail.jsx y se crea componente
  * se harcodea el detalle de articulo en funcion getItems.
  * se usa useEffect para mostrar getItems despues de 2s.
+ ### VERSION 1.0.6
+  * Se instala la dependencia: npm install react-router-dom.
+  * se importa {BrowserRouter, Route, Switch} de la dependecia anteriormente instalada, y se agrega en el navbar.
+  * se configura las rutas: '/'(home), '/category/:id', '/item/:id'
+  * en itemListContainer y itemDetailContainer se importa el hook {useParams}, tambien de la dependencia instalada.
+  * se usa {useParams} para crear una variable estática que guarde el parametro {id} de la URL.
+  * se consfigura links: brand navega al home '/', al clickear un articulo muestra la ruta '/item/:id' y muestra el detalle del producto,
+    al clickear en una categorpia del navbar muestra la ruta '/category/:id' y muestra el listado de articulos.
+  * Por último, se agrega ruta de error, y componente que muestra mensaje de error.
+
+  

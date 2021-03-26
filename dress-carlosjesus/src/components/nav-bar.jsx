@@ -1,14 +1,16 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import CartWidget from './cartWidget';
+
 
 const NavBar = () => {    
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-            <a className="navbar-brand" href=" ">
+            <NavLink exact to = '/' activeClassName = 'active' className="navbar-brand" >
               Clothing Store 
-            </a>
+            </NavLink>
             <button
               className="navbar-toggler"
               type="button"
@@ -22,21 +24,21 @@ const NavBar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav">
-                <a className="nav-link active" aria-current="page" href=" ">
+                <NavLink to = {`/category/1`} activeClassName = 'active' className="nav-link active" aria-current="page">
                   Shirt's
-                </a>
-                <a className="nav-link" href=" ">
+                </NavLink>
+                <NavLink to = '/pants' activeClassName = 'active' className="nav-link">
                   Pants
-                </a>
-                <a className="nav-link" href=" ">
-                  T-Shisrt's
-                </a>
-                <a className="nav-link" href=" ">
+                </NavLink>
+                <NavLink to = '/tshirt' activeClassName = 'active' className="nav-link">
+                  T-Shirt's
+                </NavLink>
+                <NavLink to = '/jacket' activeClassName = 'active' className="nav-link">
                   Jacket's
-                </a>
-                <a className="nav-link" href=" ">
-                  Sportswear
-                </a>
+                </NavLink>
+                <NavLink to = '/sport' activeClassName = 'active' className="nav-link">
+                  Sports
+                </NavLink>
               </div>
             </div>
             <CartWidget/>
