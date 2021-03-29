@@ -8,7 +8,7 @@ const NavBar = () => {
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-            <NavLink exact to = '/' activeClassName = 'active' className="navbar-brand" >
+            <NavLink exact to ={'/'} activeClassName = 'active' className="navbar-brand" >
               Clothing Store 
             </NavLink>
             <button
@@ -24,19 +24,19 @@ const NavBar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav">
-                <NavLink to = {`/category/1`} activeClassName = 'active' className="nav-link active" aria-current="page">
+                <NavLink exact to = {`/category/shirt`} activeClassName = 'active' className="nav-link active" aria-current="page">
                   Shirt's
                 </NavLink>
-                <NavLink to = '/pants' activeClassName = 'active' className="nav-link">
+                <NavLink exact to = {'/category/pants'} activeClassName = 'active' className="nav-link">
                   Pants
                 </NavLink>
-                <NavLink to = '/tshirt' activeClassName = 'active' className="nav-link">
+                <NavLink exact to = {'/category/tshirt'} activeClassName = 'active' className="nav-link">
                   T-Shirt's
                 </NavLink>
-                <NavLink to = '/jacket' activeClassName = 'active' className="nav-link">
+                <NavLink exact to = {'/category/jacket'} activeClassName = 'active' className="nav-link">
                   Jacket's
                 </NavLink>
-                <NavLink to = '/sport' activeClassName = 'active' className="nav-link">
+                <NavLink exact to = {'/category/sport' }activeClassName = 'active' className="nav-link">
                   Sports
                 </NavLink>
               </div>

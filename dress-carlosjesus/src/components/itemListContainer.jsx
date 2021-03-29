@@ -22,7 +22,7 @@ const itemJson = [
     },
     {
         id : 3,
-        categoria:' pantalon',
+        category:' pantalon',
         title : ' Jean chupin negro',
         img : 'https://http2.mlstatic.com/D_NQ_NP_813380-MLA31112803634_062019-O.webp',
         detail : 'Jean estilo chupin sport elegante color negro talle 43',
@@ -30,6 +30,7 @@ const itemJson = [
     },
     {
         id : 4,
+        category : 'pantalon',
         title : ' Jeans elastizado mujer',
         img : 'https://http2.mlstatic.com/D_NQ_NP_756033-MLA27778355159_072018-W.webp',
         detail : 'Jean elastizado talle 38 color celeste',
@@ -37,6 +38,7 @@ const itemJson = [
     },
     {
         id : 5,
+        category : 'tshisrt',
         title : ' Camisa Manga corta',
         img : 'https://home.ripley.com.pe/Attachment/WOP_5/2005252570453/2005252570453-1.jpg',
         detail : 'Camisa manga corta Navigata floreada fondo azul marino',
@@ -44,6 +46,7 @@ const itemJson = [
     },
     {
         id : 6,
+        category : 'tshisrt',
         title : ' Camisa manga corta Efron',
         img : '//home.ripley.com.pe/Attachment/WOP_5/2016253689044/2016253689044_2.jpg',
         detail : 'Camisa manga corta Index Efron con diseño de palmeras.',
@@ -59,6 +62,7 @@ const itemJson = [
     },
     {
         id : 8,
+        category : 'sport',
         title : ' Conjunto Adidas Teamsports',
         img : 'https://home.ripley.com.pe/Attachment/WOP_5/2020246227359/2020246227359_2.jpg',
         detail : 'Conjunto Adidas buzo tracksuit Teamsports.',
@@ -71,18 +75,30 @@ const ItemListContainer = (props) => {
     
     const [items, setItems] = useState([]);
     const {id} = useParams();
+    //const [category,setCategory] = useState([]);
+    //const newObj = itemJson.filter(obj=> obj.category === id)
+    console.log(id);
 
     useEffect(()=>{
     
         const itemPromise = new Promise((resolve, reject) =>{
             setTimeout(()=>{
+                
                 resolve(itemJson);
+                
             },2000)
         })
         itemPromise.then((response)=>{
-            setItems(response)
+            if(id === undefined){
+                setItems(response);
+            }
+            else{
+                setItems(response.filter(obj => obj.category === id));
+                console.log(response);
+
+            }
         })
-    },[])
+    },[id])
     
     return(
         <div>

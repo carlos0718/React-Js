@@ -16,17 +16,17 @@ function App() {
           <Route exact path = '/'>
             <ItemListContainer text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit" />
           </Route>
-          <Route path = '/category/:id'>
+          <Route exact path = '/category/:id'>
             <div>
               <ItemListContainer text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit" />
             </div>
           </Route>
-          <Route path = '/item/:id'>
+          <Route exact path = '/item/:id'>
             <div>
               <ItemDetailContainer />
             </div>
           </Route>
-          <Route path = '*'>
+          <Route exact path = '*'>
               <Error/>
           </Route>
         </Switch>
