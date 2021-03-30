@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import ItemCont from "./itemCont";
 import ItemList from "./itemList";
 
-const itemJson = [
+export const itemJson = [
     {
         id : 1,
         category: "Jackets",
@@ -75,9 +75,6 @@ const ItemListContainer = (props) => {
     
     const [items, setItems] = useState([]);
     const {id} = useParams();
-    //const [category,setCategory] = useState([]);
-    //const newObj = itemJson.filter(obj=> obj.category === id)
-    console.log(id);
 
     useEffect(()=>{
     
@@ -94,7 +91,6 @@ const ItemListContainer = (props) => {
             }
             else{
                 setItems(response.filter(obj => obj.category === id));
-                console.log(response.filter(obj => obj.category === id));
 
             }
         })
