@@ -6,7 +6,7 @@ import ItemList from "./itemList";
 const itemJson = [
     {
         id : 1,
-        category: 'campera',
+        category: "Jackets",
         title : ' Camperon de mujer con capucha',
         img : 'https://http2.mlstatic.com/D_NQ_NP_856695-MLA42389865272_062020-O.webp,',
         detail : 'Camperon talle M, es impermeable y cortaviento',
@@ -14,7 +14,7 @@ const itemJson = [
     },
     {
         id : 2,
-        category: 'campera',
+        category: "Jackets",
         title : ' Campera Hoodie de hombre',
         img : 'https://http2.mlstatic.com/D_NQ_NP_908376-MLA43772884685_102020-O.webp',
         detail : 'Campera talle S, material de algodon',
@@ -22,7 +22,7 @@ const itemJson = [
     },
     {
         id : 3,
-        category:' pantalon',
+        category:'Pants',
         title : ' Jean chupin negro',
         img : 'https://http2.mlstatic.com/D_NQ_NP_813380-MLA31112803634_062019-O.webp',
         detail : 'Jean estilo chupin sport elegante color negro talle 43',
@@ -30,7 +30,7 @@ const itemJson = [
     },
     {
         id : 4,
-        category : 'pantalon',
+        category : 'Pants',
         title : ' Jeans elastizado mujer',
         img : 'https://http2.mlstatic.com/D_NQ_NP_756033-MLA27778355159_072018-W.webp',
         detail : 'Jean elastizado talle 38 color celeste',
@@ -38,7 +38,7 @@ const itemJson = [
     },
     {
         id : 5,
-        category : 'tshisrt',
+        category : 'Shirts',
         title : ' Camisa Manga corta',
         img : 'https://home.ripley.com.pe/Attachment/WOP_5/2005252570453/2005252570453-1.jpg',
         detail : 'Camisa manga corta Navigata floreada fondo azul marino',
@@ -46,7 +46,7 @@ const itemJson = [
     },
     {
         id : 6,
-        category : 'tshisrt',
+        category : 'Shirts',
         title : ' Camisa manga corta Efron',
         img : '//home.ripley.com.pe/Attachment/WOP_5/2016253689044/2016253689044_2.jpg',
         detail : 'Camisa manga corta Index Efron con diseño de palmeras.',
@@ -54,7 +54,7 @@ const itemJson = [
     },
     {
         id : 7,
-        category: 'campera',
+        category: "Jackets",
         title : ' Campera sport gris melange',
         img : 'https://s3-us-west-2.amazonaws.com/im-prod-products-images/dcd5a5eb-776b-4721-a85f-bf1a75fba386-1180107793_1.jpeg',
         detail : 'Campera sport gris melange Trial.',
@@ -62,7 +62,7 @@ const itemJson = [
     },
     {
         id : 8,
-        category : 'sport',
+        category : 'Sports',
         title : ' Conjunto Adidas Teamsports',
         img : 'https://home.ripley.com.pe/Attachment/WOP_5/2020246227359/2020246227359_2.jpg',
         detail : 'Conjunto Adidas buzo tracksuit Teamsports.',
@@ -89,7 +89,7 @@ const ItemListContainer = (props) => {
             },2000)
         })
         itemPromise.then((response)=>{
-            if(typeof(id) === undefined){
+            if(id === undefined){
                 setItems(response);
             }
             else{

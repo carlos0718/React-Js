@@ -24,19 +24,19 @@ const NavBar = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav">
-                <NavLink exact to = {`/category/shirt`} activeClassName = 'active' className="nav-link active" aria-current="page">
-                  Shirt's
+                <NavLink exact to = {`/category/Shirts`} activeClassName = 'active' className="nav-link active" aria-current="page">
+                  Shirts
                 </NavLink>
-                <NavLink exact to = {'/category/pants'} activeClassName = 'active' className="nav-link">
+                <NavLink exact to = {'/category/Pants'} activeClassName = 'active' className="nav-link">
                   Pants
                 </NavLink>
-                <NavLink exact to = {'/category/tshirt'} activeClassName = 'active' className="nav-link">
-                  T-Shirt's
+                <NavLink exact to = {'/category/T-Shirts'} activeClassName = 'active' className="nav-link">
+                  Shorts
                 </NavLink>
-                <NavLink exact to = {'/category/jacket'} activeClassName = 'active' className="nav-link">
-                  Jacket's
+                <NavLink exact to = {'/category/Jackets'} activeClassName = 'active' className="nav-link">
+                  Jackets
                 </NavLink>
-                <NavLink exact to = {'/category/sport' }activeClassName = 'active' className="nav-link">
+                <NavLink exact to = {'/category/Sports' }activeClassName = 'active' className="nav-link">
                   Sports
                 </NavLink>
               </div>
