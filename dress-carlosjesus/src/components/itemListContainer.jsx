@@ -89,12 +89,12 @@ const ItemListContainer = (props) => {
             },2000)
         })
         itemPromise.then((response)=>{
-            if(id === undefined){
+            if(typeof(id) === undefined){
                 setItems(response);
             }
             else{
                 setItems(response.filter(obj => obj.category === id));
-                console.log(response);
+                console.log(response.filter(obj => obj.category === id));
 
             }
         })
