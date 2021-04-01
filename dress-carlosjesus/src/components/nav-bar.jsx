@@ -6,8 +6,8 @@ import CartWidget from './cartWidget';
 const NavBar = () => {    
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <div className="container-fluid">
+        <nav className="navbar navbar-expand-lg navbar-light nav-bar">
+          <div className="container-fluid navbar-container-fuid">
             <NavLink exact to ={'/'} activeClassName = 'active' className="navbar-brand" >
               Clothing Store 
             </NavLink>

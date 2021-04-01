@@ -4,27 +4,23 @@ import ItemDetail from './ItemDetail';
 import {itemJson} from './itemListContainer'
 
 
-const getItems = (id) =>{
-    
-    return new Promise(resolve=>{
-        setTimeout(()=>{
-            resolve(itemJson)
-            /* id : 2,
-            title : ' Campera Hoodie de hombre',
-            img : 'https://http2.mlstatic.com/D_NQ_NP_908376-MLA43772884685_102020-O.webp',
-            detail : 'Campera talle S, color gris. Material de algodon',
-            price : '2.890' */
-        },2000)
-    })
-}
-
 const ItemDetailContainer = ( ) => {
     const [item, setItem] = useState([]);
     const {id} = useParams();
 
     useEffect(()=>{
-        getItems(Number(id))
-        .then((res) => {
+        const getItems = new Promise(resolve=>{
+            setTimeout(()=>{
+                resolve(itemJson)
+                /* id : 2,
+                title : ' Campera Hoodie de hombre',
+                img : 'https://http2.mlstatic.com/D_NQ_NP_908376-MLA43772884685_102020-O.webp',
+                detail : 'Campera talle S, color gris. Material de algodon',
+                price : '2.890' */
+            },2000)
+        })
+        getItems.then((res) => {
+            console.log(res)
             setItem(res.filter(obj => obj.id === id))
         });
             
