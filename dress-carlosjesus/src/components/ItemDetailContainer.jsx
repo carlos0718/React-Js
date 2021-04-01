@@ -21,7 +21,7 @@ const ItemDetailContainer = ( ) => {
         })
         getItems.then((res) => {
             console.log(res)
-            setItem(res.filter(obj => obj.id === id))
+            setItem(res.find(obj => obj.id === Number(id)))
         });
             
     },[id])
