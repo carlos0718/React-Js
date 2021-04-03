@@ -90,6 +90,7 @@ const ItemListContainer = (props) => {
                 setItems(response);
             }
             else{
+                //console.log(response);
                 setItems(response.filter(obj => obj.category === id));
 
             }

@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Curso React-Js de CoderHouse
+# PROYECTO REACT-JS: Tienda de Ropa online
+# E-commerce de venta online de ropa, tanto para caballero y dama. Encontrás la ropa que te gusta por catedorias.
+# Selecciona las categorías desde la barra de navegación y encontrás el listado de articulos. 
+# Mira el detalle/descripción de cada prenda para ver si se ajusta a tu medida y gustos.
+# Dale añadir al carrito para poder guardarlo, y luego finalizar tu compra.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### version 1.0.0
+ 
+ * Se imstala npm init
+ * Se crea el package.json
+ * Se crea la app con el comando npx create-react-app dress-carlosjesus
+ * Se se creó carpeta event-carlosjesus
+ * ejecutar la app desde la consola con 'npm start'.
+### version 1.0.1
 
-## Available Scripts
+ * se agrega carpeta components
+ * dentro de ella se crear archivo nav-bar.js
+ * se crea el componente NavBar.
+ * luego se exporta el componente Nav-Bar a archivo App.js
+ * se instala bootstrap por linea de comando con npm : npm install bootstrap
+ * se usa bootstrap para hacer la barra de navegación.
+### version 1.0.2
+ * se agregar archivo cartWidget en la carpeta components.
+ * se crea componente cartWidget.
+ * se agrega imagen de carrito dentro de ella, y se importa.
+ * luego se exporta cartWidget a nav-bar.
+ * se agrega listContainer en la carpeta components.
+ * se exporta a app.js para mostrarlo en la app.
+### version 1.0.3
+ * se agrega archivo itemCont.
+ * se crea componente itemCont.
+   se exporta al archivo itemListContainer y se monta dentro de ItemListContainer.
+ * se usa props para usar asignar valores enteros al valor inicial y a stock.
+ * se usa Hooks : useState().
+ * y se hace funcional el cuadro de contador de articulos.
+### version 1.0.4
+ * Se agrega el archivo item.jsx e itemList.jsx, y se crea componentes correspondientes.
+ * Se agrega array de objetos de articulos en el archivo itemListContainer.
+ * se exporta item.jsx a itemList.jsx
+ * luego el componente itemList se exporta a itemListContainer.
+ * se usa useEffects para hacer la promesa y renderizar el listaldo de items despues de 2s.
+ ### version 1.0.5
+ * se crea archivo itemDetailContainer.jsx y se crea componente.
+ * se crea archivo itemDetail.jsx y se crea componente
+ * se harcodea el detalle de articulo en funcion getItems.
+ * se usa useEffect para mostrar getItems despues de 2s.
+ ### VERSION 1.0.6
+  * Se instala la dependencia: npm install react-router-dom.
+  * se importa {BrowserRouter, Route, Switch} de la dependecia anteriormente instalada, y se agrega en el navbar.
+  * se configura las rutas: '/'(home), '/category/:id', '/item/:id'
+  * en itemListContainer y itemDetailContainer se importa el hook {useParams}, tambien de la dependencia instalada.
+  * se usa {useParams} para crear una variable dinámica que guarde el parametro {id} de la URL.
+  * se consfigura links: brand navega al home '/', al clickear un articulo muestra la ruta '/item/:id' y muestra el detalle del producto,
+    al clickear en una categoría del navbar muestra la ruta '/category/:id' y muestra el listado de articulos.
+  * se hace el filtrado por categoria y se muestra el detalle para cada item.
+  * se agrega gif de proyecto.
+  * Por último, se agrega ruta de error, y componente que muestra mensaje de error.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  

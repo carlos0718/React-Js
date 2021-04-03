@@ -9,7 +9,7 @@ const NavBar = () => {
         <nav className="navbar navbar-expand-lg navbar-light nav-bar">
           <div className="container-fluid navbar-container-fuid">
             <NavLink exact to ={'/'} activeClassName = 'active' className="navbar-brand" >
-              Clothing Store 
+              Fashion Station 
             </NavLink>
             <button
               className="navbar-toggler"
