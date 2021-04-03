@@ -1,6 +1,5 @@
 import React,{useState,useEffect}  from "react";
 import { useParams } from "react-router-dom";
-import ItemCont from "./itemCont";
 import ItemList from "./itemList";
 
 export const itemJson = [
@@ -104,8 +103,6 @@ const ItemListContainer = (props) => {
                 <ItemList items={items}/>
             </div>
             <p>{props.text}</p>
-            <ItemCont text = 'Agregar al carrito' 
-            numero = {0} stock = {10} initial = {0}/>
         </div>
     );
 };

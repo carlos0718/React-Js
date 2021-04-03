@@ -45,7 +45,7 @@
  * se crea archivo itemDetail.jsx y se crea componente
  * se harcodea el detalle de articulo en funcion getItems.
  * se usa useEffect para mostrar getItems despues de 2s.
- ### VERSION 1.0.6
+ ### version 1.0.6
   * Se instala la dependencia: npm install react-router-dom.
   * se importa {BrowserRouter, Route, Switch} de la dependecia anteriormente instalada, y se agrega en el navbar.
   * se configura las rutas: '/'(home), '/category/:id', '/item/:id'
@@ -56,5 +56,8 @@
   * se hace el filtrado por categoria y se muestra el detalle para cada item.
   * se agrega gif de proyecto.
   * Por último, se agrega ruta de error, y componente que muestra mensaje de error.
-
+### version 1.0.7
+ * se importa el itemCount al itemDetail
+ * al seleccionar 'Agregar al carrito', se renderiza el card detail con un nuevo boton de 'terminar compra'.
+ * al seleccionar el boton de 'terminar compra', se navega al componenete, por ahora vacío de la ruta '/cart'
   

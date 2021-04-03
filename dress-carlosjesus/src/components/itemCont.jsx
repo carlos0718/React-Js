@@ -11,10 +11,6 @@ const ItemCont = (props) => {
     const resta = () =>{
         setValue(value-1);
     }
-    const onAdd = ()=> {        
-        alert(`Se agregó ${value} articulo(s) al carrito`)
-        //console.log('asdasdas');
-    }
     
     return (
         <div className = "card cardContenedor">
@@ -28,7 +24,7 @@ const ItemCont = (props) => {
                     onClick = {(suma)} disabled = {value === props.stock } >+</button>
             </div>
             <button type="button" className="btn btn-primary btn-lg btnAdd" 
-                onClick = {onAdd} >{props.text}</button>
+                onClick = {()=>props.onAdd(value)} >{props.text}</button>
         </div>
     );
 };
