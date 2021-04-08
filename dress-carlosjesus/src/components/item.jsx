@@ -8,7 +8,7 @@ const Item = ({item}) => {
             <Link to = {`/item/${item.id}`}>
                 <img className = "card-img-top img-card" src = {item.img} alt=""/>
             </Link> 
-                <div className = "card-body">
+                <div className = "card-body body-card">
                     <h4 className = "card-text item-title">{item.title}</h4>
                     <h6 className = "card-subtitle mb-2 text-muted item-price">$ {item.price}</h6>
                 </div>

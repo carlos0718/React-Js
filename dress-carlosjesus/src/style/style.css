@@ -6,17 +6,6 @@
     background-color: #E4E4E4;
 }
 
-/* .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-} */
-
 .nav-bar{
     font-size:20px;
     font-weight: bold;
@@ -34,7 +23,7 @@
     margin-top: 35px;
     width: 20rem; 
     height: 3rem;
-    display:inline-block;
+    
 }
 
 .button{
@@ -54,10 +43,10 @@
    height: 35rem;
    margin-left:auto;
    margin-right: auto;
-   margin-bottom: 7em;
+   margin-bottom: 5em;
    border-radius: 20px;
    border: none;
-
+   display:table;
 }
 
 .img-card{
@@ -77,14 +66,18 @@
 }
 
 .itemListCard{
-    display: inline;
+     column-count: 3;
+    /* display:list-item; */    
 }
 
+.body-card{
+    margin: 1em;
+    height: 4em;
+}
 .containerItemList{
+    padding-bottom: 5em;
     margin-top: 2em;
-    margin-bottom: 2em;
-    column-count: 2;
-
+    margin-bottom: 0em;
 }
 
 .itemDetail{
@@ -96,18 +89,8 @@
     padding: 9rem ;
     margin: 5rem;
 }
-/* @media (min-width : 700px){
-    .itemListCard{
-        display:inline;
-    }
-    .itemCard{
-        width: 18rem;
-        height: 18rem; 
-        margin-left:auto;
-        margin-right: auto;
-        
-     }
-} */
+
+
 @media (max-width : 700px){
     .App, html {
         margin: 0;
@@ -120,24 +103,27 @@
 
     }
     .itemCard{
-        width: 10rem;
+        width: 12rem;
         height: 25rem;
-        margin-left:0.5rem;
-        margin-right: 0rem;
+      /*   margin-left:0.5rem;
+        margin-right: 0rem; */
         margin-bottom: 1rem;
         font-size: 0.8rem;
-        
+        border-radius: 20px;
+        border: none;
+        /* display: inline-block; */
      }
      .img-card{
-        height: 12rem;
-        width: 10rem;
+        height: 14rem;
+        width: 12rem;
         margin-top: 0rem;
         border-radius: 20px;
     }
      .containerItemList{
         margin-top: 2em;
         margin-bottom: 2em;
-        width: 23rem;
+        /* width: 23rem; */
+        column-count: 2;
     }
     .nav-bar{
         width: 23rem;

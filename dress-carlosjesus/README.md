@@ -60,4 +60,9 @@
  * se importa el itemCount al itemDetail
  * al seleccionar 'Agregar al carrito', se renderiza el card detail con un nuevo boton de 'terminar compra'.
  * al seleccionar el boton de 'terminar compra', se navega al componenete, por ahora vacío de la ruta '/cart'
-  
+### version 1.0.8
+ * se implementa React Contex para mantener el estado de compra del usuario.
+ * se crea carpeta context dento de la carpeta src
+ * se crea archivo CartContext.
+ * se crea componente CartProvider
+ * en el itemDetail, al clickear en el boton comprar se guarda el producto como objeto en el CartContext que se importó.

@@ -30,9 +30,6 @@ const NavBar = () => {
                 <NavLink exact to = {'/category/Pants'} activeClassName = 'active' className="nav-link">
                   Pants
                 </NavLink>
-                <NavLink exact to = {'/category/T-Shirts'} activeClassName = 'active' className="nav-link">
-                  Shorts
-                </NavLink>
                 <NavLink exact to = {'/category/Jackets'} activeClassName = 'active' className="nav-link">
                   Jackets
                 </NavLink>

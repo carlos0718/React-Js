@@ -1,11 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import CartContext from '../context/CartContext';
 import ItemCont from './itemCont'
 
 const ItemDetail = ({item}) => {
     const [count,setCount] = useState(0);
+
+    const {addItem, cart} = useContext(CartContext);
+
     const addHandler = (e)=>{
         alert(`Se agregó ${e} articulo(s) al carrito`)
+        addItem(item, e)
         setCount(e)
     }
     return (
@@ -16,10 +21,9 @@ const ItemDetail = ({item}) => {
                 </div>
                 <div className="col-md-8">
                     <div className="card-body cardBody">
-                        {count}
-                        <h5 className="card-title">{item.title}</h5>
-                        <p className="card-text">{item.detail}</p>
-                        <h3 className="card-text">$ {item.price}</h3>
+                        <h5 className="card-title item-title">{item.title}</h5>
+                        <p className="card-text item-title">{item.detail}</p>
+                        <h3 className="card-text item-price">$ {item.price}</h3>
                     </div>
                 </div>
             </div>
