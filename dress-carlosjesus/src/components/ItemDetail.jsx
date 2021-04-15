@@ -1,18 +1,19 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import CartContext from '../context/CartContext';
+import {CartContext} from '../context/CartContext';
 import ItemCont from './itemCont'
 
 const ItemDetail = ({item}) => {
     const [count,setCount] = useState(0);
+    const {addToItem} = useContext(CartContext);
 
-    const {addItem, cart} = useContext(CartContext);
-
-    const addHandler = (e)=>{
+    const addArticulo = (e)=>{
         alert(`Se agregó ${e} articulo(s) al carrito`)
-        addItem(item, e)
-        setCount(e)
+        const count = Number(e);
+        addToItem(item, count);
+        setCount(count);
     }
+    console.log(setCount);
     return (
         <div className="card mb-3 itemDetail">
             <div className="row no-gutters">
@@ -31,7 +32,7 @@ const ItemDetail = ({item}) => {
                 count === 0 ?
                 <div>
                     <ItemCont text = 'Agregar al carrito' 
-                    stock = {10} initial = {0} onAdd={addHandler}/>
+                    stock = {10} initial = {0} onAdd={addArticulo}/>
                 </div>
                 :
                 <div>

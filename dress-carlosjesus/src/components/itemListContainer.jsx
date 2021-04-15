@@ -67,6 +67,14 @@ export const itemJson = [
         detail : 'Conjunto Adidas buzo tracksuit Teamsports.',
         price : '3,200'
     },
+    {
+        id : 9,
+        category : 'Sports',
+        title : ' Camiseta de temporada Boca Jr.',
+        img : 'https://media.e-subsidesports.com/sites/m2/media/catalog/product/cache/38d4094f49a5c2931b615f53f1250097/a/6/a66d71588a62b8313e450d6fe1660828c8bf518be43816f041109399050bbadc.jpeg',
+        detail : 'Camiseta Boca Jr. en color azul y blanca',
+        price : '2,500'
+    },
 
 ];
 

@@ -4,9 +4,10 @@ import ItemListContainer from "./components/itemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import Error from "./components/Error";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { CartProvider } from "./context/CartContext";
+import { CartProvider} from "./context/CartContext";
 
 function App() {
+
   return (
     <CartProvider>
       <BrowserRouter>
