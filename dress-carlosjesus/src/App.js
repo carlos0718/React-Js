@@ -5,6 +5,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import Error from "./components/Error";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { CartProvider} from "./context/CartContext";
+import Cart from "./components/Cart";
 
 function App() {
 
@@ -26,6 +27,9 @@ function App() {
               <div>
                 <ItemDetailContainer />
               </div>
+            </Route>
+            <Route exact path = '/cart'>
+              <Cart></Cart>
             </Route>
             <Route exact path="*">
               <Error />
