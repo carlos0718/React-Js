@@ -11,7 +11,7 @@ const Cart = () => {
          <table className="table">
             <thead className="thead-dark">
                <tr>
-                  <th scope="col">Nombre</th>
+                  <th scope="col">Artículo</th>
                   <th scope="col">Cantidad</th>
                   <th scope="col">Remove</th>
                </tr>
@@ -23,12 +23,13 @@ const Cart = () => {
                      {
                         cart.map(cartItem =>(
                            
-                              <tr key={cartItem.item.id}>
-                                 <th scope="row"></th>
-                                 <td>{cartItem.item.title}</td>
-                                 <td>{cartItem.quantity}</td>
-                                 <td onClick={()=>removeItem(cartItem.item.id)}><img src={trash} width="30" height="30" alt="trash" /></td>
-                              </tr>
+                           <tr key={cartItem.item.id}>
+                              <th scope="row"></th>
+                              <td>{cartItem.item.title}</td>
+                              <td>{cartItem.cant}</td>
+                              {console.log(cartItem.item.title,cartItem.cant)}
+                              <td onClick={()=>removeItem(cartItem.item.id)}><img src={trash} width="30" height="30" alt="trash" /></td>
+                           </tr>
                            
                        ))
                      }
