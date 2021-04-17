@@ -4,21 +4,28 @@ const CartContext = React.createContext([]);
 
 const CartProvider = ({children}) =>{
    const [cart, setCart] = useState([]);
+   const [totalPrecioItem, setTotalPrecioItem] = useState(0);//para poder obtener el precio por cada item.
    const [totalItems, setTotalItems] = useState(0);
-   const [totalPrecio, setTotalPrecio] = useState(0); 
+   const [totalPrecioCart, setTotalPrecioCart] = useState(0); 
    
    useEffect(()=>{
+      /* let precioTotal = cart.reduce((acu,item)=>{
+         const precioFinal = item.cant * item.item.price;
+         return precioFinal;
+      },0) */
+
       let precio = cart.reduce((acumulador,itemActual)=>{
-         const p = itemActual.quantity * itemActual.item.price;
+         const p = itemActual.cant * itemActual.item.price;
          return acumulador + p;
       },0);
 
       let totalItems = cart.reduce((acumulador,itemActual)=>{
-         return acumulador + itemActual.quantity;
+         return acumulador + itemActual.cant;
       },0);
       
          setTotalItems(totalItems);
-         setTotalPrecio(precio);
+         //setTotalPrecioItem(precioTotal);
+         setTotalPrecioCart(precio);
    },[cart])
 
    // agregar cierta cantidad de un ítem al carrito
@@ -31,6 +38,7 @@ const CartProvider = ({children}) =>{
       else{
          let modifyCart = [...cart];
          modifyCart[indexItem].cant += quantity;
+         setCart(modifyCart);
       }
       console.log({cart, newItem, quantity});
    }
@@ -49,7 +57,7 @@ const CartProvider = ({children}) =>{
       return currentItem ? true : false
    }
 
-   return <CartContext.Provider value = {{cart,addToItem,removeItem,clear,isInCart, totalItems,totalPrecio}}> {children} </CartContext.Provider>
+   return <CartContext.Provider value = {{cart,addToItem,removeItem,clear,isInCart, totalItems,totalPrecioCart,totalPrecioItem}}> {children} </CartContext.Provider>
 }
 
 export {CartContext, CartProvider};

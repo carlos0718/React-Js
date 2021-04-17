@@ -9,7 +9,7 @@ export const itemJson = [
         title : ' Camperon de mujer con capucha',
         img : 'https://http2.mlstatic.com/D_NQ_NP_856695-MLA42389865272_062020-O.webp,',
         detail : 'Camperon talle M, es impermeable y cortaviento',
-        price : '3.700'
+        price : '3700'
     },
     {
         id : 2,
@@ -17,7 +17,7 @@ export const itemJson = [
         title : ' Campera Hoodie de hombre',
         img : 'https://http2.mlstatic.com/D_NQ_NP_908376-MLA43772884685_102020-O.webp',
         detail : 'Campera talle S, material de algodon',
-        price : '2.890'
+        price : '2890'
     },
     {
         id : 3,
@@ -25,7 +25,7 @@ export const itemJson = [
         title : ' Jean chupin negro',
         img : 'https://http2.mlstatic.com/D_NQ_NP_813380-MLA31112803634_062019-O.webp',
         detail : 'Jean estilo chupin sport elegante color negro talle 43',
-        price : '1.350'
+        price : '1350'
     },
     {
         id : 4,
@@ -33,7 +33,7 @@ export const itemJson = [
         title : ' Jeans elastizado mujer',
         img : 'https://http2.mlstatic.com/D_NQ_NP_756033-MLA27778355159_072018-W.webp',
         detail : 'Jean elastizado talle 38 color celeste',
-        price : '1.495'
+        price : '1495'
     },
     {
         id : 5,
@@ -49,7 +49,7 @@ export const itemJson = [
         title : ' Camisa manga corta Efron',
         img : '//home.ripley.com.pe/Attachment/WOP_5/2016253689044/2016253689044_2.jpg',
         detail : 'Camisa manga corta Index Efron con diseño de palmeras.',
-        price : '2,700'
+        price : '2700'
     },
     {
         id : 7,
@@ -65,7 +65,7 @@ export const itemJson = [
         title : ' Conjunto Adidas Teamsports',
         img : 'https://home.ripley.com.pe/Attachment/WOP_5/2020246227359/2020246227359_2.jpg',
         detail : 'Conjunto Adidas buzo tracksuit Teamsports.',
-        price : '3,200'
+        price : '3200'
     },
     {
         id : 9,
@@ -73,7 +73,7 @@ export const itemJson = [
         title : ' Camiseta de temporada Boca Jr.',
         img : 'https://media.e-subsidesports.com/sites/m2/media/catalog/product/cache/38d4094f49a5c2931b615f53f1250097/a/6/a66d71588a62b8313e450d6fe1660828c8bf518be43816f041109399050bbadc.jpeg',
         detail : 'Camiseta Boca Jr. en color azul y blanca',
-        price : '2,500'
+        price : '2500'
     },
 
 ];

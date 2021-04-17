@@ -66,3 +66,9 @@
  * se crea archivo CartContext.
  * se crea componente CartProvider
  * en el itemDetail, al clickear en el boton comprar se guarda el producto como objeto en el CartContext que se importó.
+### version 1.0.9
+ * se crea componente Cart
+ * se agrega la ruta 'cart' al BrowserRouter.
+ * se icono cartWidget se pone como Link para poder acceder a la cart.
+ * se agrega mensaje en la cart con un link al landing cunado no haya item en el carrito.
+ * se hace tabla para mostrar cada item agreagdo, cada item un trash correspondiente para poder eliminarlo.
