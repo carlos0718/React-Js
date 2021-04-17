@@ -31,7 +31,7 @@ const Cart = () => {
                               <td><img src={cartItem.item.img} width="90" height="100" alt='imgItem'/></td>
                               <td>{cartItem.cant}</td>
                               {console.log(cartItem.item.title,cartItem.cant)}
-                              <td>{totalPrecioItem}</td>{console.log(totalPrecioItem)}
+                              <td>{0}</td>{console.log(totalPrecioItem)}
                               <td onClick={()=>removeItem(cartItem.item.id)}><Link to><img src={trash} width="30" height="30" alt="trash" /></Link></td>
                            </tr>
                            

@@ -6,7 +6,7 @@ const CartProvider = ({children}) =>{
    const [cart, setCart] = useState([]);
    const [totalPrecioItem, setTotalPrecioItem] = useState(0);//para poder obtener el precio por cada item.
    const [totalItems, setTotalItems] = useState(0);
-   const [totalPrecioCart, setTotalPrecioCart] = useState(0); 
+   const [totalPrecioCart, setTotalPrecioCart] = useState(); 
    
    useEffect(()=>{
       /* let precioTotal = cart.reduce((acu,item)=>{

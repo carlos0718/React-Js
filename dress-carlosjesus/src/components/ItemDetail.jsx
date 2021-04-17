@@ -32,7 +32,7 @@ const ItemDetail = ({item}) => {
                 count === 0 ?
                 <div>
                     <ItemCont text = 'Agregar al carrito' 
-                    stock = {10} initial = {0} onAdd={addArticulo}/>
+                    stock = {10} initial = {1} onAdd={addArticulo}/>
                 </div>
                 :
                 <div>

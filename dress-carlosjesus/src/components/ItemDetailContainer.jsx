@@ -1,23 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
-import {itemJson} from './itemListContainer'
+import {getFirestore} from '../firebase'
 
+const getItems = (id) => {
+    const db = getFirestore();
+    const itemsCollection = db.collection('item');
+
+    const item = itemsCollection.doc(id);
+    return item.get();
+}
 
 const ItemDetailContainer = ( ) => {
     const [item, setItem] = useState([]);
     const {id} = useParams();
 
     useEffect(()=>{
-        const getItems = new Promise(resolve=>{
-            setTimeout(()=>{
-                resolve(itemJson)
-            },2000)
+    
+        getItems(id).then((res) => {
+            console.log('existe?: ',res.exists)
+            if(res.exists)
+                setItem(res.data())
         })
-        getItems.then((res) => {
-            console.log(res)
-            setItem(res.find(obj => obj.id === Number(id)))
-        });
             
     },[id])
 

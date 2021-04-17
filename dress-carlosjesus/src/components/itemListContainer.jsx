@@ -1,82 +1,7 @@
 import React,{useState,useEffect}  from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./itemList";
-
-export const itemJson = [
-    {
-        id : 1,
-        category: "Jackets",
-        title : ' Camperon de mujer con capucha',
-        img : 'https://http2.mlstatic.com/D_NQ_NP_856695-MLA42389865272_062020-O.webp,',
-        detail : 'Camperon talle M, es impermeable y cortaviento',
-        price : '3700'
-    },
-    {
-        id : 2,
-        category: "Jackets",
-        title : ' Campera Hoodie de hombre',
-        img : 'https://http2.mlstatic.com/D_NQ_NP_908376-MLA43772884685_102020-O.webp',
-        detail : 'Campera talle S, material de algodon',
-        price : '2890'
-    },
-    {
-        id : 3,
-        category:'Pants',
-        title : ' Jean chupin negro',
-        img : 'https://http2.mlstatic.com/D_NQ_NP_813380-MLA31112803634_062019-O.webp',
-        detail : 'Jean estilo chupin sport elegante color negro talle 43',
-        price : '1350'
-    },
-    {
-        id : 4,
-        category : 'Pants',
-        title : ' Jeans elastizado mujer',
-        img : 'https://http2.mlstatic.com/D_NQ_NP_756033-MLA27778355159_072018-W.webp',
-        detail : 'Jean elastizado talle 38 color celeste',
-        price : '1495'
-    },
-    {
-        id : 5,
-        category : 'Shirts',
-        title : ' Camisa Manga corta',
-        img : 'https://home.ripley.com.pe/Attachment/WOP_5/2005252570453/2005252570453-1.jpg',
-        detail : 'Camisa manga corta Navigata floreada fondo azul marino',
-        price : '2,600'
-    },
-    {
-        id : 6,
-        category : 'Shirts',
-        title : ' Camisa manga corta Efron',
-        img : '//home.ripley.com.pe/Attachment/WOP_5/2016253689044/2016253689044_2.jpg',
-        detail : 'Camisa manga corta Index Efron con diseño de palmeras.',
-        price : '2700'
-    },
-    {
-        id : 7,
-        category: "Jackets",
-        title : ' Campera sport gris melange',
-        img : 'https://s3-us-west-2.amazonaws.com/im-prod-products-images/dcd5a5eb-776b-4721-a85f-bf1a75fba386-1180107793_1.jpeg',
-        detail : 'Campera sport gris melange Trial.',
-        price : '4,700'
-    },
-    {
-        id : 8,
-        category : 'Sports',
-        title : ' Conjunto Adidas Teamsports',
-        img : 'https://home.ripley.com.pe/Attachment/WOP_5/2020246227359/2020246227359_2.jpg',
-        detail : 'Conjunto Adidas buzo tracksuit Teamsports.',
-        price : '3200'
-    },
-    {
-        id : 9,
-        category : 'Sports',
-        title : ' Camiseta de temporada Boca Jr.',
-        img : 'https://media.e-subsidesports.com/sites/m2/media/catalog/product/cache/38d4094f49a5c2931b615f53f1250097/a/6/a66d71588a62b8313e450d6fe1660828c8bf518be43816f041109399050bbadc.jpeg',
-        detail : 'Camiseta Boca Jr. en color azul y blanca',
-        price : '2500'
-    },
-
-];
+import {getFirestore} from '../firebase';
 
 const ItemListContainer = (props) => {
     
@@ -84,23 +9,40 @@ const ItemListContainer = (props) => {
     const {id} = useParams();
 
     useEffect(()=>{
-    
-        const itemPromise = new Promise((resolve, reject) =>{
-            setTimeout(()=>{
-                
-                resolve(itemJson);
-                
-            },2000)
-        })
-        itemPromise.then((response)=>{
-            if(id === undefined){
-                setItems(response);
+        //setLoading(true);
+        
+        const db = getFirestore();
+        const itemCollection = db.collection('item');
+        /* const filterCategory = itemCollection.where('category','==',id)
+
+        filterCategory.get().then((querySnapshot)=>{
+            if(querySnapshot.size > 0){
+                console.log(querySnapshot.docs.map(doc => doc.data()));
+                console.log(querySnapshot.docs.map(doc => doc.id));
             }
             else{
-                //console.log(response);
-                setItems(response.filter(obj => obj.category === id));
-
+                console.log('No results');
             }
+            setItems(querySnapshot.docs.map(doc => {
+                return { id:doc.id, ...doc.data()}
+            }));
+        })
+ */
+        itemCollection.get().then((querySnapshot)=>{
+            if(querySnapshot.size > 0){
+                console.log(querySnapshot.docs.map(doc => doc.data()));
+                console.log(querySnapshot.docs.map(doc => doc.id));
+            }
+            else{
+                console.log('No results');
+            }
+            setItems(querySnapshot.docs.map(doc => {
+                return { id:doc.id, ...doc.data()}
+            }));
+        }).catch((error) => {
+            console.log('Error searching items',error );
+        }).finally(()=> {
+            //setLoading(false);
         })
     },[id])
     
