@@ -71,4 +71,5 @@
  * se agrega la ruta 'cart' al BrowserRouter.
  * se icono cartWidget se pone como Link para poder acceder a la cart.
  * se agrega mensaje en la cart con un link al landing cunado no haya item en el carrito.
+ * se implementa hooks, totalPrecioCart y totalItem, que muestra la precio total final del carrito y la cantaidad final de los productos.
  * se hace tabla para mostrar cada item agreagdo, cada item un trash correspondiente para poder eliminarlo.
