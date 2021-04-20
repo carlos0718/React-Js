@@ -13,7 +13,7 @@ const ItemDetail = ({item}) => {
         addToItem(item, count);
         setCount(count);
     }
-    console.log(setCount);
+    console.log('setCount',setCount);
     return (
         <div className="card mb-3 itemDetail">
             <div className="row no-gutters">

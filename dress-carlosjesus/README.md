@@ -77,3 +77,6 @@
 ### version 1.1.0
  # Usando FIREBASE.
  * se instala firebase : npm i firebase  
+ * se coencta la colección de firestore con el listado de items y con el detalle del item.
+ * se hacen las llamadas de Firestore.
+ * se implemente la categorización de items.

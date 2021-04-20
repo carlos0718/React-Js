@@ -5,7 +5,9 @@ import trash from '../img/trash.svg'
 
 const Cart = () => {
 
-   const {cart,removeItem,clear,totalItems,totalPrecioCart,totalPrecioItem} = useContext(CartContext);
+   const {cart,removeItem,clear,totalItems,totalPrecioCart} = useContext(CartContext);
+
+   if(totalItems===0) return( <h1>NO HAY ITEMS EN EL CARRITO. CLICK  <Link to='/'>AQUI</Link></h1>)
 
    return (
          <table className="table">
@@ -17,29 +19,23 @@ const Cart = () => {
                   <th scope="col">Remove</th>
                </tr>
             </thead>
-            {
-               !cart.length ?
-                  <thead>
-                    <tr> NO HAY ITEMS EN EL CARRITO. CLICK  <Link to='/'>AQUI</Link></tr>
-                  </thead>
-                  
-                  :(<tbody>
+           <tbody>
                      {
                         cart.map(cartItem =>(
+                           //key={cartItem.item.id}
                            
-                           <tr key={cartItem.item.id}>
+                           <tr >
+                              {console.log('cartItem',cartItem)}
                               <td><img src={cartItem.item.img} width="90" height="100" alt='imgItem'/></td>
                               <td>{cartItem.cant}</td>
                               {console.log(cartItem.item.title,cartItem.cant)}
-                              <td>{0}</td>{console.log(totalPrecioItem)}
+                              <td>{cartItem.cant * cartItem.item.price}</td>
                               <td onClick={()=>removeItem(cartItem.item.id)}><Link to><img src={trash} width="30" height="30" alt="trash" /></Link></td>
                            </tr>
                            
                        ))
                      }
                      </tbody>
-                  )
-            }
              <thead className="thead-dark">
                <tr>
                   <th style={{width:'500px'}} scope="col">Total</th>

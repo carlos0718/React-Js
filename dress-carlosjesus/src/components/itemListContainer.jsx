@@ -13,7 +13,7 @@ const ItemListContainer = (props) => {
         
         const db = getFirestore();
         const itemCollection = db.collection('item');
-        /* const filterCategory = itemCollection.where('category','==',id)
+        const filterCategory = id ? itemCollection.where('category','==',id) : itemCollection;
 
         filterCategory.get().then((querySnapshot)=>{
             if(querySnapshot.size > 0){
@@ -26,9 +26,8 @@ const ItemListContainer = (props) => {
             setItems(querySnapshot.docs.map(doc => {
                 return { id:doc.id, ...doc.data()}
             }));
-        })
- */
-        itemCollection.get().then((querySnapshot)=>{
+        })  
+        /* itemCollection.get().then((querySnapshot)=>{
             if(querySnapshot.size > 0){
                 console.log(querySnapshot.docs.map(doc => doc.data()));
                 console.log(querySnapshot.docs.map(doc => doc.id));
@@ -36,14 +35,13 @@ const ItemListContainer = (props) => {
             else{
                 console.log('No results');
             }
-            setItems(querySnapshot.docs.map(doc => {
-                return { id:doc.id, ...doc.data()}
-            }));
+            setItems(querySnapshot.docs.map(doc => ({ id:doc.id, ...doc.data()})
+            ));
         }).catch((error) => {
             console.log('Error searching items',error );
         }).finally(()=> {
             //setLoading(false);
-        })
+        }) */
     },[id])
     
     return(

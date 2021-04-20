@@ -20,7 +20,7 @@ const ItemDetailContainer = ( ) => {
         getItems(id).then((res) => {
             console.log('existe?: ',res.exists)
             if(res.exists)
-                setItem(res.data())
+                setItem({id:res.id,...res.data()})
         })
             
     },[id])
