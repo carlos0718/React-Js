@@ -16,11 +16,11 @@ function App() {
           <NavBar></NavBar>
           <Switch>
             <Route exact path="/">
-              <ItemListContainer text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit" />
+              <ItemListContainer/>
             </Route>
             <Route exact path="/category/:id">
               <div>
-                <ItemListContainer text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit" />
+                <ItemListContainer/>
               </div>
             </Route>
             <Route exact path="/item/:id">

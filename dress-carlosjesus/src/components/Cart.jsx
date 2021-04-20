@@ -7,7 +7,7 @@ const Cart = () => {
 
    const {cart,removeItem,clear,totalItems,totalPrecioCart} = useContext(CartContext);
 
-   if(totalItems===0) return( <h1>NO HAY ITEMS EN EL CARRITO. CLICK  <Link to='/'>AQUI</Link></h1>)
+   if(totalItems===0) return( <h1 id="msg-cart">NO HAY ITEMS EN EL CARRITO.<br/> CLICK  <Link to='/'>AQUI</Link></h1>)
 
    return (
          <table className="table">

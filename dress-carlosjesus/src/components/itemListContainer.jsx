@@ -46,7 +46,6 @@ const ItemListContainer = (props) => {
     
     return(
         <div>
-            items de la categoria {id}
             <div className = 'containerItemList'>
                 <ItemList items={items}/>
             </div>

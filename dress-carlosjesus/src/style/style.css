@@ -7,8 +7,9 @@
 }
 
 .nav-bar{
-    font-size:20px;
+    font-size:25px;
     font-weight: bold;
+    background-color:slategrey;
 }
 .cardContenedor{
     margin-left: auto;
@@ -90,7 +91,12 @@
     margin: 5rem;
 }
 
-
+#msg-cart{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
+    padding: 4em;
+}
 @media (max-width : 700px){
     .App, html {
         margin: 0;
