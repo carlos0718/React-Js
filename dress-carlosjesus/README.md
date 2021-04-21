@@ -1,9 +1,6 @@
 # Curso React-Js de CoderHouse
 # PROYECTO REACT-JS: Tienda de Ropa online
-# E-commerce de venta online de ropa, tanto para caballero y dama. Encontrás la ropa que te gusta por catedorias.
-# Selecciona las categorías desde la barra de navegación y encontrás el listado de articulos. 
-# Mira el detalle/descripción de cada prenda para ver si se ajusta a tu medida y gustos.
-# Dale añadir al carrito para poder guardarlo, y luego finalizar tu compra.
+# `E-commerce de venta online de ropa, tanto para caballero y dama. Encontrás la ropa que te gusta por categorías.Selecciona las categorías desde la barra de navegación y encontrás el listado de articulos. Mira el detalle/descripción de cada prenda para ver si se ajusta a tu medida y gustos.Dale añadir al carrito para poder guardarlo, y luego finalizar tu compra.`
 
 ### version 1.0.0
  
@@ -80,3 +77,10 @@
  * se coencta la colección de firestore con el listado de items y con el detalle del item.
  * se hacen las llamadas de Firestore.
  * se implemente la categorización de items.
+
+### version 1.1.0
+# FIREBASE II
+* se crea y se implementa componente Order.
+* se crea formulario a completar con los datos del cliente.
+* se crea conexión con firebase para generar la orden de compra, con el objeto buyer.
+* se agrega control de stock con `batch`
