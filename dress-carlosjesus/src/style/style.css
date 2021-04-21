@@ -16,6 +16,7 @@
     margin-right: auto;
     width: 25rem;
     height: 12rem;
+    border: none;
 }
 
 .boxCont{
@@ -25,10 +26,12 @@
     width: 20rem; 
     height: 3rem;
     display: block;
+    border: none;
 }
 
 .button{
     width: 5rem;
+    
 }
 
 .lblCont{
@@ -46,7 +49,8 @@
    margin-right: auto;
    margin-bottom: 5em;
    border-radius: 20px;
-   border: none;
+   border-width: 5px;
+   border-color: rgb(126, 126, 126);
    display:table;
 }
 
@@ -86,6 +90,11 @@
     margin: 2rem;
 }
 
+#img-detail{
+    height: 700px;
+    width: 500px;
+}
+
 .cardBody{
     padding: 9rem ;
     margin: 5rem;
@@ -96,6 +105,24 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 60px;
     padding: 4em;
+}
+
+.formulario{
+    margin: 2em 7em;
+    border: 2px;
+}
+
+.customImput{
+    margin: 0.8em;
+}
+
+#inputId{
+    margin-bottom: 3em;
+}
+
+#titleForm{
+    font-size: 45px;
+    color: rgb(136, 136, 136);
 }
 @media (max-width : 700px){
     .App, html {

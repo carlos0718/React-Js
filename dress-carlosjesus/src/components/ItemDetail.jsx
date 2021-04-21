@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {CartContext} from '../context/CartContext';
 import ItemCont from './itemCont'
 
@@ -18,7 +18,7 @@ const ItemDetail = ({item}) => {
         <div className="card mb-3 itemDetail">
             <div className="row no-gutters">
                 <div className="col-md-4">
-                    <img src={item.img} alt="" />
+                    <img id='img-detail' src={item.img} alt="" />
                 </div>
                 <div className="col-md-8">
                     <div className="card-body cardBody">
@@ -36,9 +36,9 @@ const ItemDetail = ({item}) => {
                 </div>
                 :
                 <div>
-                    <Link to = '/cart'>
-                        <button type="button" className="btn btn-primary btn-lg btnAdd" >Terminar Compra</button>
-                    </Link>
+                    <NavLink exact to = '/cart'>
+                        <button type="button" className="btn btn-dark btn-lg btnAdd" >Ir al carrito</button>
+                    </NavLink>
                 </div>
                 
             }

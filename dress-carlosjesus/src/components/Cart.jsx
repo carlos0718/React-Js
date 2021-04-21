@@ -10,6 +10,7 @@ const Cart = () => {
    if(totalItems===0) return( <h1 id="msg-cart">NO HAY ITEMS EN EL CARRITO.<br/> CLICK  <Link to='/'>AQUI</Link></h1>)
 
    return (
+      <div>
          <table className="table">
             <thead className="thead-dark">
                <tr>
@@ -23,16 +24,14 @@ const Cart = () => {
                      {
                         cart.map(cartItem =>(
                            //key={cartItem.item.id}
-                           
-                           <tr >
-                              {console.log('cartItem',cartItem)}
-                              <td><img src={cartItem.item.img} width="90" height="100" alt='imgItem'/></td>
-                              <td>{cartItem.cant}</td>
-                              {console.log(cartItem.item.title,cartItem.cant)}
-                              <td>{cartItem.cant * cartItem.item.price}</td>
-                              <td onClick={()=>removeItem(cartItem.item.id)}><Link to><img src={trash} width="30" height="30" alt="trash" /></Link></td>
+                           <tr key={cartItem.item.id}>
+                                 {console.log('cartItem',cartItem)}
+                                 <td><img src={cartItem.item.img} width="90" height="100" alt='imgItem'/></td>
+                                 <td>{cartItem.cant}</td>
+                                 {console.log(cartItem.item.title,cartItem.cant)}
+                                 <td>$ {cartItem.cant * cartItem.item.price}</td>
+                                 <td onClick={()=>removeItem(cartItem.item.id)}><Link ><img src={trash} width="30" height="30" alt="trash" /></Link></td>
                            </tr>
-                           
                        ))
                      }
                      </tbody>
@@ -40,11 +39,17 @@ const Cart = () => {
                <tr>
                   <th style={{width:'500px'}} scope="col">Total</th>
                   <th scope="col">{totalItems} </th>
-                  <th scope="col">{totalPrecioCart} </th>
+                  <th scope="col">$ {totalPrecioCart} </th>
                   <th scope="col" onClick={clear}><Link><img src={trash} width="30" height="30" alt="trash" /></Link></th>
                </tr>
             </thead>
          </table>
+         <div>
+            <Link to = '/order'>
+                <button  type="button" className="btn btn-dark btn-lg btnAdd" >Generar Orden de Compra</button>
+            </Link>
+        </div>
+      </div>
    );
 };
 
