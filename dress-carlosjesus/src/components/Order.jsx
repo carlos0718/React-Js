@@ -11,7 +11,7 @@ const Order = () => {
    const [phone,setPhone] = useState('')
    const [email,setEmail] = useState('')
    const [address,setAddress] = useState('')
-   const [idOrden, setIdOrden ] = useState(null)
+   const [idOrden, setIdOrden ] = useState()
    const {cart,totalPrecioCart} = useContext(CartContext);
 
    const generarOrden = (e) =>{
@@ -35,6 +35,7 @@ const Order = () => {
       .then(({id}) =>{
          setIdOrden(id);
          console.log('idOrden',idOrden);
+         alert('Su orden de compra es:\n', idOrden)
       })
 
       const itemsToUpdate = db.collection('item').where(
@@ -47,9 +48,9 @@ const Order = () => {
             batch.update(docSnapshop.ref,{
                stock : docSnapshop.data().stock - cart.find(item=>item.item.id === docSnapshop.id).cant
             })
-            batch.commit().then(res=>{
-               console.log('resultado batch: ',res);
-            })
+         })
+         batch.commit().then(res=>{
+         console.log('resultado batch: ',res);
          })
       })
 
@@ -80,7 +81,7 @@ const Order = () => {
                </div>
             </fieldset>
          </form>
-         <button  onClick={generarOrden} type="submit" className="btn btn-dark btn-lg btnAdd" >Terminar Compra</button>
+         <button onClick={generarOrden} type="submit" className="btn btn-dark btn-lg btnAdd" >Terminar Compra</button>
          
       </div>
    );

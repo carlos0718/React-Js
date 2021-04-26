@@ -27,7 +27,7 @@ const ItemDetailContainer = ( ) => {
 
     return (
         <div>
-            Estoy en el detalle de item {id}
+            {/* Estoy en el detalle de item {id} */}
             <ItemDetail item = {item}/>
         </div>
     );
