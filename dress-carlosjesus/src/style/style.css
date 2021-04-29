@@ -137,6 +137,15 @@
     display: block;
     
 }
+
+.box-idOrder{
+    border: solid 2px darkgray;
+    background-color: slategrey;
+    border-radius: 5px;
+    color: aliceblue;
+    margin:2em 25em;
+    
+}
 @media (max-width : 700px){
     .App, html {
         margin: 0;

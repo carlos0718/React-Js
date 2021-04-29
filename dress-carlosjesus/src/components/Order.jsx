@@ -15,7 +15,7 @@ const Order = () => {
    const [address,setAddress] = useState('')
    const [idOrden, setIdOrden ] = useState()
    const {cart,totalPrecioCart} = useContext(CartContext);
-   console.log("idOrden iniciaalizado :",idOrden)
+   console.log("idOrden inicializado :",idOrden)
 
    const generarOrden = (e) =>{
       e.preventDefault();
@@ -30,7 +30,7 @@ const Order = () => {
       const items = cart.map(cartItem => {
          return {id:cartItem.item.id,title:cartItem.item.title,price:cartItem.item.price};
       })
-      alert('Orden generada exitosamente')
+      //alert('Orden generada exitosamente')
       console.log('buyer', userBuyer);
       console.log('items', items);
       console.log('total', totalPrecioCart);
@@ -56,11 +56,7 @@ const Order = () => {
       })
 
    }
- /*   const handleInputmail=(e)=>{
-      if(emailValidator !== email){
-         alert('Los mails no son iguales');
-      }
-   } */
+ 
   
    return (
       <div>
@@ -91,7 +87,7 @@ const Order = () => {
             </fieldset>
          </form>
          <button onClick={generarOrden} type="submit" className="btn btn-dark btn-lg btnAdd" >Terminar Compra</button>
-         
+         {idOrden !== undefined ? <h3 className='box-idOrder'>Su código de Compra es:<br/> {idOrden}</h3>:<h3 className='box-idOrder'> </h3>}
       </div>
    );
 };

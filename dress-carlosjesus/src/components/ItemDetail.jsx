@@ -8,7 +8,7 @@ const ItemDetail = ({item}) => {
     const {addToItem} = useContext(CartContext);
 
     const addArticulo = (e)=>{
-        alert(`Se agregó ${e} articulo(s) al carrito`)
+        //alert(`Se agregó ${e} articulo(s) al carrito`)
         const count = Number(e);
         addToItem(item, count);
         setCount(count);
