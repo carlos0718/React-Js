@@ -51,6 +51,9 @@ const CartProvider = ({children}) =>{
       return currentItem ? true : false
    }
 
+  console.log('totalItems',totalItems);
+
+ 
    return <CartContext.Provider value = {{cart,addToItem,removeItem,clear,isInCart, totalItems,totalPrecioCart}}> {children} </CartContext.Provider>
 }
 

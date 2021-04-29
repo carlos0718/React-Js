@@ -2,6 +2,7 @@
 # **PROYECTO REACT-JS: Tienda de Ropa online**
 # `E-commerce de venta online de ropa, tanto para caballero y dama. Encontrás la ropa que te gusta por categorías.Selecciona las categorías desde la barra de navegación y encontrás el listado de articulos. Mira el detalle/descripción de cada prenda para ver si se ajusta a tu medida y gustos.Dale añadir al carrito para poder guardarlo, y luego finalizar tu compra.`
 
+# Instalación de dependecias, ejecutar: `npm install `
 ### version 1.0.0
  
  * Se instala `npm init`

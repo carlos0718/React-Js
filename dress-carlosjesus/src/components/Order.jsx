@@ -1,4 +1,4 @@
-import React, { useState,useContext } from 'react';
+import React, { useState,useContext} from 'react';
 import { CartContext } from '../context/CartContext';
 import firebase from 'firebase'
 import {getFirestore} from '../firebase';
@@ -6,13 +6,16 @@ import 'firebase/firestore';
 
 
 const Order = () => {
+  
    const [firstname,setFirstName] = useState('')
    const [lastname,setLastName] = useState('')
    const [phone,setPhone] = useState('')
    const [email,setEmail] = useState('')
+   const [emailValidator,setEmailValidator] = useState('')
    const [address,setAddress] = useState('')
    const [idOrden, setIdOrden ] = useState()
    const {cart,totalPrecioCart} = useContext(CartContext);
+   console.log("idOrden iniciaalizado :",idOrden)
 
    const generarOrden = (e) =>{
       e.preventDefault();
@@ -34,10 +37,8 @@ const Order = () => {
       orderGenerate.add({buyer:userBuyer,items,date, total:totalPrecioCart})
       .then(({id}) =>{
          setIdOrden(id);
-         console.log('idOrden',idOrden);
-         alert('Su orden de compra es:\n', idOrden)
       })
-
+         
       const itemsToUpdate = db.collection('item').where(
          firebase.firestore.FieldPath.documentId(),'in',cart.map(i=>i.item.id)
       )
@@ -55,8 +56,12 @@ const Order = () => {
       })
 
    }
-
-
+ /*   const handleInputmail=(e)=>{
+      if(emailValidator !== email){
+         alert('Los mails no son iguales');
+      }
+   } */
+  
    return (
       <div>
           <form className='formulario'>
@@ -71,7 +76,11 @@ const Order = () => {
                   </div>
                </div>       
                <div className='customImput'>
-                  <input className="form-control" value={email} onChange={e=>setEmail(e.target.value)} type='email' placeholder="name@example.com"/>
+                  <input className="form-control" value={email} onChange={e=>setEmail(e.target.value)} type='email' placeholder="email@example.com"/>
+               </div>
+                <div className='customImput'>
+                  <input className="form-control" value={emailValidator} onChange={e=>setEmailValidator(e.target.value)} type='email' placeholder="repit-email@example.com" /* onBlur={handleInputmail} *//>
+                  {email !== emailValidator ? <div className= "validatorMail">mail no coincide con el anterior </div>: true }
                </div>
                <div className='customImput'>
                   <input className="form-control" value={phone} onChange={e=>setPhone(e.target.value)} type='text' placeholder="phone: 157891235"/>

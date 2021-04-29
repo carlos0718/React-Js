@@ -124,6 +124,19 @@
     font-size: 45px;
     color: rgb(136, 136, 136);
 }
+
+.validatorMail{
+    font-size: 13px;
+    letter-spacing: 2px;
+    color:red;
+    text-align: left;
+}
+
+.totalItems{
+    color:rgba(0, 0, 0, 0.597);
+    display: block;
+    
+}
 @media (max-width : 700px){
     .App, html {
         margin: 0;
